@@ -3,6 +3,7 @@ elenes dotfiles
 
 **my dotfiles**
 so far includes:
+    
     .vimrc
     .viminfo
     .vim/
