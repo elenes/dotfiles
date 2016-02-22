@@ -2,11 +2,11 @@ elenes dotfiles
 ===============
 
 **my dotfiles**
-so far includes:
+so far include:
     
-    .vimrc
-    .viminfo
-    .vim/
+* `.vimrc`
+* `.viminfo`
+* `.vim/`
 
 Setup
 -----
