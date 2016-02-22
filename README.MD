@@ -3,10 +3,12 @@ elenes dotfiles
 
 **my dotfiles**
 so far include:
-    
-* `.vimrc`
-* `.viminfo`
-* `.vim/`
+```    
+|-- .vimrc
+|-- .viminfo
+|-+ .vim
+  |-- ...
+```
 
 Setup
 -----
