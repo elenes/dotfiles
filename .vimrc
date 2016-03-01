@@ -53,7 +53,7 @@ set wrap
 set linebreak
 set textwidth=79
 set wrapmargin=2
-set formatoptions=qrn1
+set formatoptions=qrnt1
 set colorcolumn=80
 
 nnoremap <up> <nop>
