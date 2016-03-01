@@ -4,9 +4,12 @@ elenes dotfiles
 **my dotfiles**
 so far include:
 ```    
+|-- .gitignore
 |-- .vimrc
 |-- .viminfo
 |-+ .vim
+  |-+ colors
+  |-+ bundle
   |-- ...
 ```
 
