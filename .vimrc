@@ -50,9 +50,11 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 set wrap
+set linebreak
 set textwidth=79
+set wrapmargin=2
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 nnoremap <up> <nop>
 nnoremap <down> <nop>
