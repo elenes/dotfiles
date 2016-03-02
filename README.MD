@@ -1,8 +1,8 @@
 elenes dotfiles
 ===============
 
-**my dotfiles**
-so far include:
+Contents
+--------
 ```    
 |-- .gitignore
 |-- .vimrc
