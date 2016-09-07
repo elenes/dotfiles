@@ -26,10 +26,12 @@ fi
 # Linux specific configs
 if [ "$(uname -s)" = "Linux" ] ; then
   echo " "
+  # Load in the git branch prompt script.
+  source ~/.bash/.git-prompt.sh
   # Set window title
   PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
   # Prompt
-  PS1='\[\033[1;32m\]\u\[\033[0m\]@\[\033[1;37m\]\h\[\033[0m\]: \[\033[1;34m\]\w\n\[\033[1;32m\]\$\[\033[0m\] '
+  PS1='\[\033[1;32m\]\u\[\033[0m\]@\[\033[1;37m\]\h\[\033[0m\]: \[\033[1;34m\]\w \[\033[1;35m\]$(__git_ps1)\n\[\033[1;32m\]\$\[\033[0m\] '
   
 fi
 
