@@ -38,6 +38,9 @@ fi
 # Mac OS specific configs
 if [ "$(uname -s)" = "Darwin" ] ; then
   echo " "
+
+  # Load in the git branch prompt script.
+  source ~/.bash/.git-prompt.sh
 fi
 
 #================================
