@@ -9,9 +9,6 @@ case $- in
       *) return;;
 esac
 
-# Setup some environment variables.
-export HISTSIZE=1000
-
 # Force /usr/local/bin to be first in the path search
 export PATH=/usr/local/bin:$PATH
 
@@ -23,37 +20,18 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
   export TERM=xterm-256color
 fi
 
-# Linux specific configs
-if [ "$(uname -s)" = "Linux" ] ; then
-  echo " "
-  # Load in the git branch prompt script.
-  source ~/.bash/.git-prompt.sh
-  # Set window title
-  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-  # Prompt
-  PS1='\n\[\033[1;32m\]\u\[\033[0m\]@\[\033[1;37m\]\h\[\033[0m\]: \[\033[1;33m\]\w \[\033[1;35m\]$(__git_ps1)\n\[\033[1;32m\]\$\[\033[0m\] '
-  
-fi
+echo "loading elenes shell settings - mac version"
 
-# Mac OS specific configs
-if [ "$(uname -s)" = "Darwin" ] ; then
-  echo "loading elenes shell settings - mac version"
-
-  # Load in the git branch prompt script.
- source ~/.bash/.git-prompt.sh
- # Prompt
- export PS1="\n\[\033[1;32m\]\u\[\033[0m\]@\[\033[1;37m\]\h\[\033[0m\]: \[\033[1;33m\]\w \[\033[1;35m\]$(__git_ps1)\n\[\033[1;32m\]\$\[\033[0m\] "
-fi
+# Load in the git branch prompt script.
+source ~/.bash/.git-prompt.sh
+# Prompt
+export PS1="\n\[\033[1;32m\]\u\[\033[0m\]@\[\033[1;37m\]\h\[\033[0m\]: \[\033[1;33m\]\w \[\033[1;35m\]$(__git_ps1)\n\[\033[1;32m\]\$\[\033[0m\] "
 
 
 #================================
 # Personal aliases and functions
 #================================
 
-# Source system wide bashrc, if it exists, before running personal configurations
-if [ -f "/etc/bashrc" ] ; then
-  source /etc/bashrc
-fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -73,21 +51,18 @@ function used_space() {
 }
 
 
-# Linux specific configs
-if [ "$(uname -s)" = "Linux" ] ; then
-  # Make ls use list, show hidden and colors by default
-  alias ls="ls -lha --color=auto"
-fi
 
-# Mac OS specific configs
-if [ "$(uname -s)" = "Darwin" ] ; then
-  # Make ls use list, show hidden and colors by default
-  alias ls="ls -lhaG"
-fi
+# Make ls use list, show hidden and colors by default
+alias ls="ls -lhaG"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
+fi
+
+# homebrew completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
 fi
