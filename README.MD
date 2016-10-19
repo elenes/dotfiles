@@ -24,3 +24,8 @@ Copy `.vim/pathogen/autoload/`
 to   `.vim/autoload/`
 
 Rename/move stuff as needed
+
+###ohmyzsh
+
+Theme = flazz
+Plugins = (git vi-mode)
