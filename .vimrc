@@ -2,8 +2,9 @@ filetype off
 execute pathogen#infect() 
 filetype plugin indent on
 
-syntax on
-colorscheme molokai
+syntax enable
+set background=light
+colorscheme solarized
 
 if has('gui_running')
   set guifont=Inconsolata\ 10
