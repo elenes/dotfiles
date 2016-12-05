@@ -1,20 +1,37 @@
+" Franz Felscher dotfiles
+" 
+" ~/.vimrc
+" 
 filetype off
 execute pathogen#infect() 
 filetype plugin indent on
 
+" syntax highlighting
 syntax enable
-set background=light
 colorscheme solarized
 
+" ----------------------------------------------------------------------------
+" gui settings 
+set guioptions-=m   "remove menubar"
+set guioptions-=T   "remove toolbar"
+set guioptions-=r   "remove scrollbar"
+set guioptions-=L   "remove scrollbar"
+set linespace=3
+let g:solarized_italic=0
+
 if has('gui_running')
-  set guifont=Inconsolata\ 10
+    set guifont=DejaVu\ Sans\ Mono\ Book\ 10
+    set bg=light
+else
+    " dark bg in terminal mode
+    set bg=dark
 endif
 
 set nocompatible
 
 set modelines=0
 
-set tabstop=4
+set tabstop=2       " tab width 
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -33,7 +50,11 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+" relative line numbering
 set relativenumber
+set number
+"nnoremap <leader>l :setl rnu!<cr>
+
 set undofile
 
 let mapleader = ","

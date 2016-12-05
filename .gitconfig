@@ -1,3 +1,5 @@
 [user]
 	email = franzfelscher@icloud.com
 	name = Franz Felscher
+[core]
+	editor = vim
