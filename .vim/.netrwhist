@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/franz/.vim'
-let g:netrw_dirhist_2='/home/franz/.vim/bundle'
-let g:netrw_dirhist_3='/home/franz/.vim/autoload'
-let g:netrw_dirhist_4='/home/franz/.vim/bundle'
-let g:netrw_dirhist_5='/home/franz/.vim'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/franz/develop/wicon_web/wiconweb/search'
+let g:netrw_dirhist_2='/home/franz/develop/wicon_web/wiconweb/static/templates/search'
+let g:netrw_dirhist_3='/home/franz/develop/wicon_web/wiconweb/static/templates'
+let g:netrw_dirhist_4='/home/franz/develop/wicon_web/wiconweb/static'
+let g:netrw_dirhist_5='/home/franz/develop/wicon_web/wiconweb'
+let g:netrw_dirhist_6='/home/franz/develop/wicon_web/wiconweb/search'

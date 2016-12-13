@@ -1,0 +1,27 @@
+zh
+gvim usersync.py
+touch usersync.py
+open_with 4
+cd /
+find font
+cd ~
+open_with 1
+shell 
+AliasCommand 
+x
+open_with 0
+open_with 6
+deletelkhkjkjkj
+open_with 
+rename search.html
+rename refine_search.html
+w
+rename solarized-dark
+rename solarized-light
+rename .Xressources
+shell -p kj
+delete
+vim 
+
+open_with vim
+rename .Xdefaults

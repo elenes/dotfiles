@@ -19,15 +19,15 @@ set guioptions-=m   "remove menubar"
 set guioptions-=T   "remove toolbar"
 set guioptions-=r   "remove scrollbar"
 set guioptions-=L   "remove scrollbar"
-set linespace=3
+set linespace=3			"linespacing
 let g:solarized_italic=0
 
 if has('gui_running')
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 12
-    set bg=light
+	set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
+	set bg=light
 else
-    " dark bg in terminal mode
-    set bg=dark
+	" dark bg in terminal mode
+	set bg=dark
 endif
 
 " ranger file chooser
@@ -36,11 +36,15 @@ let g:ranger_map_keys=1 " map to ,r
 
 set nocompatible
 
+" disable bell
+set vb
+set t_vb=
+
 set modelines=0
 " tabs / indent
-set tabstop=2       " tab width 
-set shiftwidth=2
-set softtabstop=2
+setglobal tabstop=2       " tab width 
+setglobal shiftwidth=2
+setglobal softtabstop=2
 
 set encoding=utf-8
 set scrolloff=3
@@ -74,8 +78,10 @@ let mapleader = ","
 
 nnoremap / /\v
 vnoremap / /\v
+" case insensitve unless search contains upper case
 set ignorecase
 set smartcase
+
 set gdefault
 set incsearch
 set showmatch
